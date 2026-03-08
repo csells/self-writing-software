@@ -8,29 +8,43 @@
 
 ---
 
+When the first session broke down mid-run and he was asked whether to continue from where it failed, Chris said:
+
 > no. I'd like to start over from scratch. I'm looking for a complete end-to-end success if we can get one.
 
 ---
+
+When the orchestrator skipped human review after round 1 and proceeded directly to round 2, Chris said:
 
 > aren't you supposed to ask me for input after round 1? are you even following the instructions in the skill?
 
 ---
 
+When an agent argued that staging and build time would make the human wait 15+ minutes per PR — making the approval gate a throughput bottleneck that would kill the product — Chris said:
+
 > Green mountain is wrong. None of that is a problem. Staging takes as long as it takes as well as coding. All of that happens in the background so the human isn't notified until it's ready. Without the build loop, none of it works. The whole point is to always be turning signal into code improvements. Auto merge for low risk is absolutely the way to go
 
 ---
+
+When round 2 launched cleanly, Chris said:
 
 > Lfg!
 
 ---
 
+When agents argued that concentrating only the hardest bugs on humans would be cognitively exhausting, and that staging environments couldn't reliably reproduce production bugs (making human approval meaningless), Chris said:
+
 > Humans get to focus on the changes that bring real value. That's a benefit not a detriment. But since the agent swarm is doing the root cause analysis and fixes, and another swarm does the code review to ensure it lives up to general purpose and org specific best practices, the human is there to understand from the top level and can kill the work, push back, guide the agents or approve, spending as much or as little of their attention as is expected needed. That's the value humans bring: the knowledge to know what direction to go. Staging can be configured to be EXACTLY like production. That's no blocker. Of course this is what all of software engineering turns into. Competition softens the ground for this completely new way of doing things
 
 ---
 
+When asked whether to proceed to the survivor stress test, Chris said:
+
 > Yes please
 
 ---
+
+When the stress test raised three attacks — whether the auto-merge confidence classifier was structurally broken because it couldn't model deployment risk from diff scope alone; whether a policy layer existed above the PR diff to govern high-risk categories; and whether the system had any mechanism for detecting architectural drift over time — Chris answered each in turn:
 
 > 1. Is interesting. There's a balance between the auto merge and human generated merge. I think the goal would be to keep the barrier for auto merge high to start and let the human select a PR and say "you can merge things like this yourself next time" to give the system more autonomy and scale. On the other hand, a human is going to need a description of what changed and the implications of that change so they can have the knowledge to make their decision. Of course, they can take as much time with every pr and needed to ask questions and dig into every detail.
 >
@@ -40,9 +54,13 @@
 
 ---
 
+When SilentRiver's verdict recommended running a signal suppression test as the most urgent first experiment — on the grounds that agents might generate try/catch suppression hacks instead of genuine fixes — Chris said:
+
 > Dude. I wrote a fix for agents swallowing errors a long time ago
 
 ---
+
+When asked what that fix was, Chris shared his architecture best practices document:
 
 > It's a single line in a list of 20 other architectural best practices:
 >
@@ -66,6 +84,8 @@
 > - **Write for Maintainability** — clear, readable code that future developers can understand without archaeology.
 
 ---
+
+When the reviewer-catches-suppression model was described as a pass/fail gate — the agent reviewer flags the violation and the PR fails — Chris corrected the architecture:
 
 > No. The agent reviewer swarm sends it back to the agent implementation swarm and they iterate together until they get something that's ready for human review
 

@@ -10,10 +10,9 @@ Every production error, every analytics shortfall, every piece of customer feedb
 
 The human's job isn't to review code. It's to set direction.
 
-## In this repo
-
 - **[PRINCIPLES.md](PRINCIPLES.md)** — Ten principles for building software that improves itself
 - **[RAMBLE.md](RAMBLE.md)** — The founder's voice: every word said on the topic, verbatim, in the order it came out
+
 
 ## Origin
 

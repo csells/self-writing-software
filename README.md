@@ -11,9 +11,4 @@ Every production error, every analytics shortfall, every piece of customer feedb
 The human's job isn't to review code. It's to set direction.
 
 - **[PRINCIPLES.md](PRINCIPLES.md)** — Ten principles for building software that improves itself
-- **[RAMBLE.md](RAMBLE.md)** — The founder's voice: every word said on the topic, verbatim, in the order it came out
-
-
-## Origin
-
-These principles were distilled from a full [Brenner Protocol](https://github.com/csells/brenner-biz) research session — three adversarial AI agents stress-testing the core idea until only what held up remained.
+- **[RAMBLE.md](RAMBLE.md)** — The initial agentic conversation that lead to these principles.
